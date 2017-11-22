@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Converter</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<style>
+		body
+		{
+			margin-top: 20px;
+			background-color: #333;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1">
+				<h4 class="text-center mb-2">Volume Converter</h4>
+				<form>
+					<div class="form-group">
+						<input type="number" class="form-control form-control-lg" placeholder="Enter Gallons" id="volumeInput">						
+					</div>
+				</form>
+				<div id="volumeOutput">
+					<div class="card card-primary mb-2">
+						<div class="card-block">
+							<h4>Liters:</h4>
+							<div id="litersOutput"></div>
+						</div>
+					</div>
+					<div class="card card-success mb-2">
+						<div class="card-block">
+							<h4>Ounces:</h4>
+							<div id="fluidOuncesOutput"></div>
+						</div>
+					</div>
+					<div class="card card-danger mb-2">
+						<div class="card-block">
+							<h4>Milliliters:</h4>
+							<div id="millilitersOutput"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-md-offset-1">
+				<h4 class="text-center mb-2">Length Converter</h4>
+				<form>
+					<div class="form-group">
+						<input type="number" class="form-control form-control-lg" placeholder="Enter Miles" id="lengthInput">						
+					</div>
+				</form>
+				<div id="lengthOutput">
+					<div class="card card-primary mb-2">
+						<div class="card-block">
+							<h4>Kilometers:</h4>
+							<div id="kilometersOutput"></div>
+						</div>
+					</div>
+					<div class="card card-success mb-2">
+						<div class="card-block">
+							<h4>Yards:</h4>
+							<div id="yardsOutput"></div>
+						</div>
+					</div>
+					<div class="card card-danger mb-2">
+						<div class="card-block">
+							<h4>Inches:</h4>
+							<div id="inchesOutput"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-md-offset-1">
+				<h4 class="text-center mb-2">Weight Converter</h4>
+				<form>
+					<div class="form-group">
+						<input type="number" class="form-control form-control-lg" placeholder="Enter Pounds" id="weightInput">						
+					</div>
+				</form>
+				<div id="weightOutput">
+					<div class="card card-primary mb-2">
+						<div class="card-block">
+							<h4>Kilograms:</h4>
+							<div id="kilogramsOutput"></div>
+						</div>
+					</div>
+					<div class="card card-success mb-2">
+						<div class="card-block">
+							<h4>Ounces:</h4>
+							<div id="ouncesOutput"></div>
+						</div>
+					</div>
+					<div class="card card-danger mb-2">
+						<div class="card-block">
+							<h4>Grams:</h4>
+							<div id="gramsOutput"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1">
+				<h4 class="text-center mb-2">Speed Converter</h4>
+				<form>
+					<div class="form-group">
+						<input type="number" class="form-control form-control-lg" placeholder="Enter Miles/Hour" id="speedInput">						
+					</div>
+				</form>
+				<div id="speedOutput">
+					<div class="card card-primary mb-2">
+						<div class="card-block">
+							<h4>Km/Hr:</h4>
+							<div id="kmphOutput"></div>
+						</div>
+					</div>
+					<div class="card card-success mb-2">
+						<div class="card-block">
+							<h4>Mt/Sec:</h4>
+							<div id="mtrpsOutput"></div>
+						</div>
+					</div>
+					<div class="card card-danger mb-2">
+						<div class="card-block">
+							<h4>Knots:</h4>
+							<div id="knotsOutput"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-md-offset-1">
+				<h4 class="text-center mb-2">Time Converter</h4>
+				<form>
+					<div class="form-group">
+						<input type="number" class="form-control form-control-lg" placeholder="Enter Seconds" id="timeInput">						
+					</div>
+				</form>
+				<div id="timeOutput">
+					<div class="card card-primary mb-2">
+						<div class="card-block">
+							<h4>Minutes:</h4>
+							<div id="minutesOutput"></div>
+						</div>
+					</div>
+					<div class="card card-success mb-2">
+						<div class="card-block">
+							<h4>Hours:</h4>
+							<div id="hoursOutput"></div>
+						</div>
+					</div>
+					<div class="card card-danger mb-2">
+						<div class="card-block">
+							<h4>Days:</h4>
+							<div id="daysOutput"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-md-offset-1">
+				<h4 class="text-center mb-2">Area Converter</h4>
+				<form>
+					<div class="form-group">
+						<input type="number" class="form-control form-control-lg" placeholder="Enter Square Miles" id="areaInput">						
+					</div>
+				</form>
+				<div id="areaOutput">
+					<div class="card card-primary mb-2">
+						<div class="card-block">
+							<h4>Acres:</h4>
+							<div id="acresOutput"></div>
+						</div>
+					</div>
+					<div class="card card-success mb-2">
+						<div class="card-block">
+							<h4>Square Feet:</h4>
+							<div id="squareFeetOutput"></div>
+						</div>
+					</div>
+					<div class="card card-danger mb-2">
+						<div class="card-block">
+							<h4>Hectares:</h4>
+							<div id="hectaresOutput"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
